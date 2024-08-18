@@ -1,0 +1,46 @@
+form{
+    display:flex;
+    flex-direction: column;
+    height: 500px;
+    width: 400px;
+    align-items: flex-start;
+   margin:auto;/*it brings to center*/
+   margin-top: 15px;
+   align-self: center;
+}
+input{
+    width: 50%;/*it makes the input box size big based on px*/
+    height:30px;
+    margin:10px;/*gap betwwn the each input*/
+    border-radius: 10px;/*gives border for textbox*/
+    font-size: 20px;
+    border:1px solid black;
+    text-align: center;
+
+}
+body{
+    background:url(img/login.jpg) no-repeat center center/cover;
+    color: rgb(1, 1, 57);
+    font-size:medium;
+   
+}
+.contain{
+    width:450px;
+    height:450px;
+    background:url(img/Untitled\ design.png)no-repeat center center/cover;
+    background-blend-mode:hard-light;
+    text-align: center;
+    margin-left: 36%;
+    margin-top: 10%;
+    margin-bottom: 6%;
+    border-bottom-style: dashed;
+    border-right-style:dashed;
+    border-top-style:dashed;
+    border-left-style: dashed;
+
+}
+button{
+    background-color: palevioletred;
+}
+
+

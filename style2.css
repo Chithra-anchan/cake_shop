@@ -1,0 +1,101 @@
+/*body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}*/
+
+#order_container {
+    background-color: rgb(235, 164, 239);
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    color: #0e0d0d;
+    margin-bottom: 20px;
+}
+
+.ordered-items {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #f8f9fa;
+    text-align: left;
+}
+
+.ordered-item {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.ordered-item:last-child {
+    border-bottom: none;
+}
+
+.remove-btn {
+    background-color: #eedddf;
+    color: rgb(255, 247, 247);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+    background-color: #c82333;
+}
+
+#order_form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#order_form input[type="text"],
+#order_form input[type="tel"],
+#order_form textarea {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: black;
+}
+
+#order_form button[type="submit"] {
+    background-color: rgb(10, 187, 10);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#order_form button[type="submit"]:hover {
+    background-color: green;
+}
+
+#total_price {
+    background-color: #ece5ec;
+    color: rgb(16, 4, 4);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}

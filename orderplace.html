@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Cake Template">
+    <meta name="keywords" content="Cake, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Frosted Fantacy</title>
+    <link rel="icon" href="img/Frosted Fantacy 12.png">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="style2.css" type="text/css">
+</head>
+ <!-- Header Section Begin -->
+ <header class="header">
+    <div class="header__top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="header__top__inner">
+                        <div class="header__logo">
+                            <a href="./index.html"><img src="img/Frosted Fantacy 12.png" alt=""></a>
+                        </div>
+                        <div class="header__top__right">
+                            <div class="header__top__right__links">
+                                <a href="./product.html" class="search-switch"><img src="img/icon/search.png" alt=""></a>
+                            </div>
+                            <div class="header__top__right__cart">
+                                
+                                <a href="./loginform.html"> <img src="img/icon/login.png" alt=""> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open"><i class="fa fa-bars"></i></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <nav class="header__menu mobile-menu">
+                    <ul>
+                        <li class="active"><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./product.html">Shop</a></li>
+                          <a href="orderplace.html"><li id="order_icon"><img src="img/icon/cart1.png" alt=""></i> <span id="order_count">0</span></li></a>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header Section End -->
+
+<body>
+    <div id="order_container">
+        <h2>ORDERED ITEMS</h2>
+        <div class="ordered-items" id="ordered_items_container">
+        
+        </div>
+        <div id="total_price"></div>
+        <form id="order_form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea><br><br>
+            <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" id="one" name="upi" value="1"> Cash on Delivery</label>
+                <label >
+                <input type="radio"id="one" name="upi" value="1"> Scan and Pay</label>
+                <img src="img/qr.png" height="180px"width="180px">
+         <br>
+            <br>
+            <button type="submit" id="submit_button"href="./product.html">Submit Order</button>
+            
+        </form>
+    </div>
+    <footer>
+        <div class="container">
+            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with love</p>
+        </div>
+    </footer>
+
+
+    <script>
+       
+        var orderedItems = sessionStorage.getItem('orderedItems');
+        if (orderedItems) {
+            orderedItems = JSON.parse(orderedItems);
+
+            var container = document.getElementById('ordered_items_container');//display the ordered item
+
+            var totalPrice = 0;
+
+
+            orderedItems.forEach(function (item, index) {  //iterate over each item in order item array
+                var orderedItemDiv = document.createElement('div');
+                orderedItemDiv.classList.add('ordered-item');
+                orderedItemDiv.innerHTML = '<div><p><strong>Name:</strong> ' + item.name + '</p>' +
+                    '<p><strong>Price:</strong> ' + item.price + '</p></div>' +
+                    '<button class="remove-btn" onclick="removeItem(' + index + ')">Remove</button>';
+                container.appendChild(orderedItemDiv);//append order item to container add item list to web page
+
+           
+                totalPrice += item.price;
+            });
+
+           
+            var totalPriceDiv = document.getElementById('total_price');
+            totalPriceDiv.innerHTML = '<p><strong>Total Price:</strong> ' + totalPrice + '</p>';
+        } else {
+            
+            var totalPriceDiv = document.getElementById('total_price');
+            totalPriceDiv.innerHTML =  'No items ordered yet.';
+         
+        }
+
+     
+        function removeItem(index) {
+            var orderedItems = sessionStorage.getItem('orderedItems');
+            if (orderedItems) {
+                orderedItems = JSON.parse(orderedItems);
+
+                orderedItems.splice(index, 1);//remove item specfic index
+
+                sessionStorage.setItem('orderedItems', JSON.stringify(orderedItems));//update order item in session storage
+                location.reload();
+            }
+        }
+
+
+        document.getElementById('order_form').addEventListener('submit', function (event) {
+            event.preventDefault();//default form submission
+
+            var orderedItems = sessionStorage.getItem('orderedItems');
+            if (orderedItems) {
+                var name = document.getElementById('name').value;
+                var address = document.getElementById('address').value;
+                var formData = new FormData();//handling form
+                formData.append('name', name);
+                formData.append('address', address);
+                formData.append('orderedItems', orderedItems);
+
+                var xhr = new XMLHttpRequest();//create new httprqst object
+                xhr.open('POST', 'save_order.php', true);//conn open send post rqst to save order.php
+                xhr.onload = function () {//define call bck rqst is loaded
+                    if (xhr.status === 200) {
+                        alert(xhr.responseText);
+                        sessionStorage.removeItem('orderedItems');//remove item from session storage
+                        window.location.href = 'index.html';
+                    } else {
+                        alert('Failed to submit order. Please try again later.');
+                    }
+                };
+                xhr.send(formData);//sends rqst when data contain form data
+            } else {
+                alert('No items to submit.');
+            }
+        });
+    </script>
+</body>
+
+</html>

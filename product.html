@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Cake Template">
+    <meta name="keywords" content="Cake, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Frosted Fantacy</title>
+    <link rel="icon" href="img/Frosted Fantacy 12.png">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="style1.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+     <!-- Offcanvas Menu Begin -->
+     <div class="offcanvas-menu-overlay"></div><!--to set in a correct place-->
+     <div class="offcanvas-menu-wrapper">
+         <div class="offcanvas__cart">
+             <div class="offcanvas__cart__links">
+                 <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
+                 <a href="#"><img src="img/icon/heart.png" alt=""></a>
+             </div>
+             <div class="offcanvas__cart__item">
+                 <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
+                 
+             </div>
+         </div>
+         <div class="offcanvas__logo">
+             <a href="./index.html"><img src="img/logo1.png" alt=""></a>
+         </div>
+     
+     </div>
+     <!-- Offcanvas Menu End -->
+   <!-- Header Section Begin -->
+   <header class="header">
+    <div class="header__top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="header__top__inner">
+                        <div class="header__logo">
+                            <a href="./index.html"><img src="img/Frosted Fantacy 12.png" alt=""></a>
+                        </div>
+                        <div class="header__top__right">
+                            <div class="header__top__right__links">
+                                <a href="./product.html" class="search-switch"><img src="img/icon/search.png" alt=""></a>
+                            </div>
+                            <div class="header__top__right__cart">
+                                <a href="./loginform.html"> <img src="img/icon/login.png" alt=""> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open"><i class="fa fa-bars"></i></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <nav class="header__menu mobile-menu">
+                    <ul>
+                        <li ><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li class="active"><a href="./product.html">Shop</a></li>
+
+                        <a href="orderplace.html"><li id="order_icon"><img src="img/icon/cart1.png" alt=""></i> <span id="order_count">0</span></li>
+                            
+                        </a>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header Section End -->
+    <div class="container">
+        <section id="main-content">
+            <h2>OUR DELICIOUS CAKE</h2>
+            <!-- Product Listing -->
+            <div class="product-container" onclick="toggleDetails(this)">
+                <div class="product-image">
+                    <img src="img/shop/product-10.jpg" alt="Cake 1">
+                </div>
+                    
+                    <h3>Chocolate Cup Cake</h3>
+                    <p>Price: Rs 140.00</p>
+                    <a href="img/icon/cart1.png"></a>
+                    <button class="order-button" onclick="incrementOrderCount('Chocolate Cup Cake', 400)">Order
+                        Now</button>
+            </div>
+            <br>
+            <div class="product-container" onclick="toggleDetails(this)">
+                <div class="product-image">
+                    <img src="img/shop/product-8.jpg" alt="Cake 2">
+                </div>
+                    <h3>Mississippi Mud</h3>
+                  
+                    <p>Price: Rs 120.00</p>
+                
+                    <button class="order-button" onclick="incrementOrderCount('Belgium Chocolate Cake', 700)">Order
+                        Now</button>
+            </div><br>
+            <div class="product-container" onclick="toggleDetails(this)">
+                <div class="product-image">
+                    <img src="img/shop/d1.jpg" alt="Cake 3">
+                </div>
+                    <h3>Black Forest Cake</h3>
+                    <p>Price: Rs 500.00</p>
+                    <!-- Ordering Interface -->
+                    <button class="order-button" onclick="incrementOrderCount('Chocolate Dream Cake', 350)">Order
+                        Now</button>
+            </div><br>
+            <div class="product-container" onclick="toggleDetails(this)">
+                <div class="product-image">
+                    <img src="img/shop/f1.jpg" alt="Cake 4">
+                </div>
+                    <h3>Caramel Ferraro</h3>
+                    <p>Price: Rs 600.00</p>
+                 
+                    <button class="order-button" onclick="incrementOrderCount('Chocolate Dream Cake', 350)">Order
+                        Now</button>
+            </div><br>
+            <div class="product-container" onclick="toggleDetails(this)">
+                <div class="product-image">
+                    <img src="img/shop/l.jpg" alt="Cake 5">
+                </div>
+                    <h3>VanillaDream Cake</h3>
+                    
+                    <p>Price: Rs 450.00</p>
+               
+                    <button class="order-button" onclick="incrementOrderCount('Chocolate Dream Cake', 350)">Order
+                        Now</button>
+            </div><br>
+            <div class="product-container" onclick="toggleDetails(this)">
+                <div class="product-image">
+                    <img src="img/shop/product-6.jpg" alt="Cake 6">
+                </div>
+                    <h3>German Chocolate</h3>
+                    <p>Price: Rs 200.00</p>
+               
+                    <button class="order-button" onclick="incrementOrderCount('Chocolate Dream Cake', 350)">Order
+                        Now</button>
+            </div><br>
+            <div class="product-container" onclick="toggleDetails(this)">
+                <div class="product-image">
+                    <img src="img/shop/h.jpg" alt="Cake 7">
+                </div>
+                    <h3>ButterScotch Pastery</h3>
+                    <p>Price: Rs 150.00</p>
+               
+                    <button class="order-button" onclick="incrementOrderCount('Chocolate Dream Cake', 350)">Order
+                        Now</button>
+            </div><br>
+            <div class="product-container" onclick="toggleDetails(this)">
+                <div class="product-image">
+                    <img src="img/shop/k.jpg" alt="Cake 8">
+                </div>
+                    <h3>Vanilla Salted Caramel</h3>
+                    <p>Price: Rs 120.00</p>
+               
+                    <button class="order-button" onclick="incrementOrderCount('Chocolate Dream Cake', 350)">Order
+                        Now</button>
+            </div><br>
+            <div class="product-container" onclick="toggleDetails(this)">
+                <div class="product-image">
+                    <img src="img/shop/product-4.jpg" alt="Cake 9">
+                </div>
+                    <h3>Rainbow Cup Cake</h3>
+                    <p>Price: Rs 84.00</p>
+               
+                    <button class="order-button" onclick="incrementOrderCount('Chocolate Dream Cake', 350)">Order
+                        Now</button>
+            </div><br>
+            <div class="product-container" onclick="toggleDetails(this)">
+                <div class="product-image">
+                    <img src="img/shop/m.jpg" alt="Cake 10">
+                </div>
+                    <h3>Chocolate Pastery</h3>
+                    <p>Price: Rs 210.00</p>
+               
+                    <button class="order-button" onclick="incrementOrderCount('Chocolate Dream Cake', 350)">Order
+                        Now</button>
+            </div><br>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with love</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDetails(container) {
+            container.querySelector('.product-details').classList.toggle('active');//it shows additional details of produ when user interacts with the container//
+        }
+
+
+
+        var orderCount = 0;
+
+        function incrementOrderCount(itemName, itemPrice) {
+            orderCount++;
+            document.getElementById("order_count").innerText = orderCount;
+
+   
+            var orderedItem = { name: itemName, price: itemPrice };
+
+
+            if (sessionStorage.getItem('orderedItems') === null) {
+                sessionStorage.setItem('orderedItems', JSON.stringify([orderedItem]));
+            } else {
+                var existingItems = JSON.parse(sessionStorage.getItem('orderedItems'));
+                existingItems.push(orderedItem);
+                sessionStorage.setItem('orderedItems', JSON.stringify(existingItems));
+            }
+        }
+    </script>
+</body>
+
+</html>
